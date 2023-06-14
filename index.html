@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
+		<script src="Js/bootstrap.min.js" async></script>
+		<script src="Js/script.js" async></script>		
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="Img/Logo_ifri_emploi.png" alt="logo_ifri" id="logo">
+				<nav>
+					<ul>
+						<li><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+						<li><a href="#event"><span class="glyphicon glyphicon-login"></span> Evènements</a></li>
+						<li><a href="consult.html"><span class="glyphicon glyphicon-consult"></span> Consultation</a></li>
+					</ul>
+					<button class="btn btn-success" id="connect"><span class="glyphicon glyphicon-search"></span>Se connecter</button>
+				</nav>
+			</div>
+		</header>
+		<main>
+			
+			<section class="purpose">
+				<div id="form">
+					<span type="button" class="btn">Fermer</span>
+					<form class="admin" style="border-bottom: 2px solid green;padding-bottom: 10px" action="traitement.py">
+						<h6>Membres d'administration</h6>
+						<div class="form-group">
+							<label for="id">Identifiant</label>
+							<input id="id" name="identifiant" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for="password">Mot de passe</label>
+							<input id="password" type="password" name="Mot_de_passe" class="form-control" required>
+						</div>
+						<button type="submit" class="btn btn-success" style="margin-top: 5px"><a href="Edition.html">Valider</a></button>
+						<p>Je n'ai pas de mot de passe ou mot de passe oublié ? <button class="btn btn-warning"><a href="Inscription_form.html">S'inscrire</a></button></p>
+					</form>
+					<form class="etu" action="traitement.py">
+						<h6>Etudiant</h6>
+						<div class="form-group">
+							<label for="matri">Matricule / No Billet d'accès</label>
+							<input id="matric" name="matricule" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for="password">Mot de passe</label>
+							<input id="password" name="Mot_de_passe" class="form-control" required>
+						</div>
+						<button type="submit" class="btn btn-success" style="margin-top: 5px"><a>Valider</a></button>
+						<p>Je n'ai pas de mot de passe ou mot de passe oublié ? <button class="btn btn-warning"><a href="Inscription_form.html">S'inscrire</a></button></p>
+					</form>
+				</div>
+				<div class="container">
+					<h1>BIENVENUE sur la plateforme de consultation des emplois du temps de l'Institut !</h1>
+					<div>
+						<!-- Mots de bienvenue et objectifs -->
+						<img src="" alt="photo-da">
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac semper urna. Pellentesque ullamcorper urna et metus mollis placerat. Mauris viverra dictum velit vel imperdiet. Vestibulum luctus volutpat lectus at venenatis. Quisque ac fermentum nulla, rhoncus pellentesque leo. Suspendisse vitae varius urna, vehicula fringilla lectus. Sed odio purus, interdum quis ultrices a, venenatis id nisl."<br>
+
+Maecenas tincidunt vel elit id tristique. Fusce sit amet odio lobortis, pretium est eget, gravida elit. Proin posuere vitae nibh a hendrerit. Curabitur non finibus orci. Curabitur ultrices sed mi quis tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean congue porttitor diam, quis feugiat nunc faucibus convallis. Nullam at leo ut enim blandit cursus. Nullam pellentesque sem aliquam ipsum porttitor, ac fermentum mauris dapibus. Vivamus ut ex malesuada, luctus arcu in, tempus est. Quisque eget ipsum bibendum tortor rhoncus mollis quis vel nibh. Donec tempus quis velit egestas euismod. Praesent non faucibus mi. Nullam vulputate vulputate lectus, sit amet gravida lectus. Curabitur odio urna, fermentum sit amet vehicula a, condimentum eu nunc.
+</p>
+					</div>
+				</div>
+			</section>
+			
+			<section id="event">
+				<h4>Evènements</h4>
+				<div class="event1">
+					<img src="img/JINF1.jpg" alt="jinf" class="image-resonsive">
+				</div>
+				<div class="event2">
+					<img src="img/JINF2.jpg" alt="jinf" class="image-resonsive">
+				</div>
+				<div class="event3">
+					<img src="img/logo-uac.png" alt="jinf" class="image-resonsive">
+				</div>
+				<div class="event4">
+					<img src="img/Logo_ifri_emploi.png" alt="jinf" class="image-resonsive">
+				</div>
+				<div class="event4">
+					<img src="img/Logo_ifri_emploi.png" alt="jinf" class="image-resonsive">
+				</div>
+				
+				
+			</section>
+			<div class="container-fluid" id="info">
+				<p class="inf1">Infos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac semper urna. Pellentesque ullamcorper urna et metus mollis placerat. Mauris viverra dictum velit vel.</p>
+				<p class="inf2">Infos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac semper urna. Pellentesque ullamcorper urna et metus mollis placerat. Mauris viverra dictum velit vel.</p>
+			</div>
+			<section id="calender">
+				<h4>Calendrier universitaire</h4>
+				<div class="container">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac semper urna. Pellentesque ullamcorper urna et metus mollis placerat. Mauris viverra dictum velit vel imperdiet. Vestibulum luctus volutpat lectus at venenatis. Quisque ac fermentum nulla, rhoncus pellentesque leo. Suspendisse vitae varius urna, vehicula fringilla lectus. Sed odio purus, interdum quis ultrices a, venenatis id nisl.
+
+Maecenas tincidunt vel elit id tristique. Fusce sit amet odio lobortis, pretium est eget, gravida elit. Proin posuere vitae nibh a hendrerit. Curabitur non finibus orci. Curabitur ultrices sed mi quis tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean congue porttitor diam, quis feugiat nunc faucibus convallis. Nullam at leo ut enim blandit cursus. Nullam pellentesque sem aliquam ipsum porttitor, ac fermentum mauris dapibus. Vivamus ut ex malesuada, luctus arcu in, tempus est. Quisque eget ipsum bibendum tortor rhoncus mollis quis vel nibh. Donec tempus quis velit egestas euismod. Praesent non faucibus mi. Nullam vulputate vulputate lectus, sit amet gravida lectus. Curabitur odio urna, fermentum sit amet vehicula a, condimentum eu nunc.
+						<a class="btn btn-danger" href="#">Télécharger le calendrier universitaire</a></p>
+					</div>
+			</section>
+			<footer>
+				<h5>Réalisé par étudiant IFRI en L1 promotion ?</h5>
+				<p>Copyyright: Juin-2023</p>
+				<i>Année-Scolaire: 2022-2023</i>
+			</footer>
+		
+		</main>
