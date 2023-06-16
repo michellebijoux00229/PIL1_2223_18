@@ -10,7 +10,7 @@ USE GE_TDP;
 
 DROP TABLE IF EXISTS Administrateur;
 
-  CREATE TABLE Administrateur(
+ CREATE TABLE Administrateur(
   id_Admin INT NOT NULL PRIMARY KEY,
   Nom_admin varchar (100) NOT NULL,
   Mot_de_passe varchar (255) NOT NULL)
@@ -44,6 +44,10 @@ DROP TABLE IF EXISTS Administrateur;
   CONSTRAINT fk_id_Filiére_Numéro_matricule_Etu FOREIGN KEY (id_Filiére ) REFERENCES Filiére ( id_Filiére ))
   ENGINE=InnoDB;
   
+ 
+    
+	
+  
   DROP TABLE IF EXISTS Matière ;
   
    CREATE TABLE  Matière (
@@ -59,7 +63,15 @@ DROP TABLE IF EXISTS Administrateur;
   id_Filiére ) REFERENCES Filiére (id_Filiére ))
   ENGINE=InnoDB;
   
-   DROP TABLE IF EXISTS Horaire;
+   DROP TABLE IF EXISTS Examen;
+  
+  CREATE TABLE Examen( date_Exam DATE ,heure_début TIME,  heure_fin TIME, id_Mat  INT NOT NULL,
+	PRIMARY KEY ( date_Exam),
+    CONSTRAINT fk_id_Mat_id_Exam FOREIGN KEY (id_Mat) REFERENCES Matière (id_Mat ))
+    ENGINE =InnoDB;
+    
+  
+  DROP TABLE IF EXISTS Horaire;
    
   CREATE TABLE Horaire(
   Date_heure DATETIME NOT NULL PRIMARY KEY,id_Mat INT NOT NULL,
