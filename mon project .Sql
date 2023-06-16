@@ -13,6 +13,9 @@ DROP TABLE IF EXISTS Administrateur;
  CREATE TABLE Administrateur(
   id_Admin INT NOT NULL PRIMARY KEY,
   Nom_admin varchar (100) NOT NULL,
+  Prénom_Admin VARCHAR(200),
+  E_mail_Admin VARCHAR(255),
+  Poste_Admin VARCHAR(255),
   Mot_de_passe varchar (255) NOT NULL)
   ENGINE =InnoDB;
   
@@ -41,6 +44,7 @@ DROP TABLE IF EXISTS Administrateur;
   Promotion_Etu VARCHAR(100),
   Email_Etu VARCHAR(100),
   id_Filiére INT NOT NULL,
+  Mot_de_passe_Etu VARCHAR(255) NOT NULL,
   CONSTRAINT fk_id_Filiére_Numéro_matricule_Etu FOREIGN KEY (id_Filiére ) REFERENCES Filiére ( id_Filiére ))
   ENGINE=InnoDB;
   
@@ -57,6 +61,7 @@ DROP TABLE IF EXISTS Administrateur;
   Masse_horaire INT(20),
   id_Salle INT NOT NULL,
   id_Filiére INT NOT NULL,
+  Temps_restant_Mat INT(20),
 	CONSTRAINT fk_id_Salle_id_Mat FOREIGN KEY (
   id_Salle ) REFERENCES 	Salle (id_Salle ),
   CONSTRAINT fk_id_Filiére_id_Mat FOREIGN KEY (
