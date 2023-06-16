@@ -18,18 +18,33 @@ header div img:hover{
 
 /* Style emplois */
 section .container{
-	margin: 5% ;
 	box-shadow: 6px 8px 12px;
-}
-section .container div img{
-	width: 120px;	
-}
-section .container #head img,div{
-	display: inline-block;
+	margin-top: 3%;
 	text-align: center;
-	padding: 2px;
-	
 }
-section .container .edition{
+section .container .head{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 5px;
+	align-items: baseline;
+}
+img{
+	width: 100px;	
+}
+section .container .head div{
+}
+
+section .container .author{
 	text-align: right;
+}
+th{
+	height: 50px;
+	background-color: grey;
+}
+tr{
+	border: 1px solid black;
+}
+td{
+	border-right: 2px solid black;
+	width: 200px;
 }

@@ -23,7 +23,19 @@
 		</header>
 		<section style="padding-top: 15px" class="container">
 			<h4>Bienvenue dans l'espace admin !</h4>
-			<form action="traitement.py" class="row" id="emploi">
+			
+			<form action="traitement.py" id="emploi">
+				<div class="row">
+					<fieldset>
+					<legend>Promotion</legend>
+					<select id="promo" name="Promotion" class="form-control">
+						<option value="L1G1">Licence 1 Groupe 1</option>
+						<option value="L1G2">Licence 1 Groupe 2</option>
+						<option value="L2GL">Licence 2 GL</option>
+						<option value="L2SI">Licence 2 SI</option>
+						<option value="L2IM">Licence 2 IM</option>
+					</select>
+				</fieldset>
 				<fieldset class="col-md-5">
 					<legend>Matières et masse horaire</legend>
 					<div class="form-group">
@@ -113,6 +125,7 @@
 					</div>
 				</fieldset>
 				<button type="submit" class="btn btn-success">Soumettre</button>
+				</div>
 			</form>
 			<form id="evenement" action="traitement.py">
 				<fieldset>

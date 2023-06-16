@@ -80,6 +80,15 @@ header div nav ul li{
 .purpose .container h1{
 	text-align: center;
 	margin: 20px 0;
+	animation: welcome 5s;
+}
+@keyframes welcome{
+	from{
+		transform: scale(0.8);
+	}
+	to{
+		transform: scale(1);
+	}
 }
 .purpose .container div{
 	padding: 10px;
@@ -87,11 +96,11 @@ header div nav ul li{
 }
 .purpose .container div img{
 	border-radius: 50%;
-	width: 120px;
+	width: 70px;
 	margin-bottom: 10px;
 }
 .purpose .container div p{
-	padding-left: 5%;
+	padding-left: 3%;
 	font-style: italic;
 }
 
@@ -107,10 +116,24 @@ header div nav ul li{
 #event div{
 	text-align: center;
 	padding-bottom: 2%;
+	animation: slideToleft 10s;
+}
+@keyframes slideToleft{
+	0%{
+		text-align: center;
+	}
+	50%{
+		transform: scale(1.1);
+		transition: transform 5s;
+	}
+	100%{
+		transform: scaleX(2);
+		transition: transform 5s;
+	}
 }
 
 #event div img{
-	width: 400px;
+	width: 250px;
 	height: 300px;
 	border-radius: 5px;
 }
