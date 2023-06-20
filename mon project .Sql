@@ -101,6 +101,11 @@ DROP TABLE IF EXISTS Administrateur;
   CONSTRAINT fk_id_Mat_id_Mat_id_Professeur FOREIGN KEY (id_Mat) REFERENCES Matière (id_Mat ),
   CONSTRAINT fk_id_Professeur_id_Mat_id_Professeur FOREIGN KEY (id_Professeur) REFERENCES Professeur  (id_Professeur))
   ENGINE=InnoDB;
-   
+
+  DROP TABLE IF EXISTS Emplois_du_temps ;
+
+  CREATE TABLE Emplois_du_temps(
+  Num_emplois INT NOT NULL
+  ENGINE=InnoB;
    
   
