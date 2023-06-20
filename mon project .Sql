@@ -105,7 +105,7 @@ DROP TABLE IF EXISTS Administrateur;
   DROP TABLE IF EXISTS Emplois_du_temps ;
 
   CREATE TABLE Emplois_du_temps(
-  Num_emplois INT NOT NULL
+  Num_emplois INT NOT NULL)
   ENGINE=InnoB;
    
   
