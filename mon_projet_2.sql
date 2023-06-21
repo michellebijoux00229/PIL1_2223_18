@@ -11,7 +11,7 @@ USE ge_tdpe;
 
 /*DROP TABLE IF EXISTS Administrateur;*/
 
-/*
+
  CREATE TABLE Administrateur(
   id_Admin INT NOT NULL PRIMARY KEY,
   Nom_admin varchar (100) NOT NULL,
@@ -107,7 +107,7 @@ CREATE TABLE  Professeur(
   Heure_début_Emplois TIME,
   Heure_fin_Emplois TIME,
   Horaire_Matiére_Emplois INT (20),
-Temps_restant_Matiére_Emplois INT(20))
+Temps_restant_Matière_Emplois INT(20))
   ENGINE=InnoDB;
   
 
