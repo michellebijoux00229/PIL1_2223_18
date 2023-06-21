@@ -18,6 +18,17 @@ DROP TABLE IF EXISTS Administrateur;
   Poste_Admin VARCHAR(255),
   Mot_de_passe varchar (255) NOT NULL)
   ENGINE =InnoDB;
+
+  DROP TABLE IF EXISTS Administrateur;
+
+ CREATE TABLE Administrateur(
+  id_Admin INT NOT NULL PRIMARY KEY,
+  Nom_admin varchar (100) NOT NULL,
+  Prénom_Admin VARCHAR(200),
+  E_mail_Admin VARCHAR(255),
+  Poste_Admin VARCHAR(255),
+  Mot_de_passe varchar (255) NOT NULL)
+  ENGINE =InnoDB;
   
    DROP TABLE IF EXISTS Salle;
    
