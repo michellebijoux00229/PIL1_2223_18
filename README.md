@@ -1,5 +1,6 @@
 # PIL1_2223_18
-Gestion d’emplois du temps universitaires - Lisez-moi Ce projet est une application web de gestion d’emplois du temps universitaires, conçue pour simplifier l’organisation et la planification des activités académiques. Vous trouverez ci-dessous les informations clés sur le projet :
+Gestion d’emplois du temps universitaires 
+Ce projet est une application web de gestion d’emplois du temps universitaires, conçue pour simplifier l’organisation et la planification des activités académiques. Vous trouverez ci-dessous les informations clés sur le projet :
 
 Collaboration en temps réel Tous les membres de l’équipe ont participé activement au travail sur ce projet. Nous avons collaboré en temps réel, partageant nos idées, nos contributions et nos mises à jour pour assurer une réalisation efficace et de qualité. Nous espérons que cette application web de gestion d’emplois du temps vous sera utile dans votre vie universitaire. N’hésitez pas à explorer la maquette interactive et à consulter le rapport de fin de projet pour plus de détails. Si vous avez des questions ou des commentaires, n’hésitez pas à nous contacter.
 
