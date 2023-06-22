@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="CSS/bootstrap.min.css">
 		<link rel="stylesheet" href="CSS/style.css">
 		<script src="Js/bootstrap.min.js" async></script>
-		<script src="Js/script.js" async></script>		
+		<script src="Js/script.js" async></script>	
 	</head>
 	<body>
 		<header>
@@ -28,31 +28,23 @@
 			<section class="purpose">
 				<div id="form">
 					<span type="button" class="btn">Fermer</span>
-					<form class="admin" style="border-bottom: 2px solid green;padding-bottom: 10px" action="traitement.py">
-						<h6>Membres d'administration</h6>
-						<div class="form-group">
-							<label for="id">Identifiant</label>
-							<input id="id" name="identifiant" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label for="password">Mot de passe</label>
-							<input id="password" type="password" name="Mot_de_passe" class="form-control" required>
-						</div>
-						<button type="submit" class="btn btn-success" style="margin-top: 5px"><a href="Edition.html">Valider</a></button>
-						<p>Je n'ai pas de mot de passe ou mot de passe oublié ? <button class="btn btn-warning"><a href="Inscription_form.html">S'inscrire</a></button></p>
-					</form>
-					<form class="etu" action="traitement.py">
-						<h6>Etudiant</h6>
-						<div class="form-group">
-							<label for="matri">Matricule / No Billet d'accès</label>
-							<input id="matric" name="matricule" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label for="password">Mot de passe</label>
-							<input id="password" name="Mot_de_passe" class="form-control" required>
-						</div>
-						<button type="submit" class="btn btn-success" style="margin-top: 5px"><a>Valider</a></button>
-						<p>Je n'ai pas de mot de passe ou mot de passe oublié ? <button class="btn btn-warning"><a href="Inscription_form.html">S'inscrire</a></button></p>
+					<form class="admin" action="traitement.py">
+						<fieldset style="margin-bottom: 5px">
+							<div class="form-group">
+								<label for="id">Identifiant / Matricule</label>
+								<input id="id" name="identifiant" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="password">Mot de passe</label>
+								<input id="password" type="password" name="Mot_de_passe" class="form-control" required>
+								<a href="#" style="font-size: 10px; color: blue">Mot de passe oublié ?</a>
+							</div>
+							<button type="submit" class="btn btn-success" style="margin-top: 5px">Valider</button>
+						</fieldset>
+						<div style="text-align: right; margin-bottom: 100px; border-top: 2px white solid; padding-top: 2px"> 
+							<a href="#" style="font-size: 10px; color: blue">Je n'ai pas un compte ?</a>
+							<a href="Inscription_form.html" class="btn btn-info" style="font-size: 12px">S'inscrire</a></div>
+						<p style="text-align: center; margin-top:"><a class="btn btn-success">Deconnexion</a></p>
 					</form>
 				</div>
 				<div class="container">

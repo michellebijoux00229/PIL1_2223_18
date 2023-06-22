@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps-Inscription</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/Inscription_form.css">	
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="Img/Logo_ifri_emploi.png" alt="logo_ifri" id="logo">
+				<nav>
+					<p><span class="glyphicon glyphicon-home"></span>Ajout d'un membre d'administration</p>
+				</nav>
+			</div>
+		</header>
+		<section>
+<!-- Formulaire d'ajout membres admins -->
+				<form>
+					<div class="form-group">
+						<label for="nom">Nom</label>
+						<input id="nom" name="nom" type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="prenom">Prénom</label>
+						<input id="" name="prenom" type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="poste">Poste</label>
+						<select id="poste" name="postes" class="form-control">
+							<option>D.G</option>
+							<option>D.A</option>
+							<option>Chef SCO</option>
+							<option>Enseignant</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="emai">Email</label>
+						<input id="emai" name="email" type="email" class="form-control" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="id">Identifiant</label>
+						<input id="id" type="password" name="id" class="form-control" required>
+					</div>
+					<button type="submit" class="btn btn-warning" style="margin-top: 10px">Soumettre</button>
+				</form>

@@ -1,4 +1,7 @@
-
+a{
+	text-decoration: none;
+	color: black;
+}
 header{
 	background-color: #D9D9D9;
 }
@@ -18,30 +21,36 @@ header div img:hover{
 }
 header div nav{
 	display: flex;
-	justify-content: space-around;
+	justify-content:space-around;
 	align-items: baseline;
-	width: 60%;
+	width: 70%;
 }
-header div nav ul button{
-	margin: 5px;
+header div nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 20px;
 }
-
 
 /* Style de la page admin */
-section h4{
-	text-align: center;
-	letter-spacing: 2px;
-	animation: agrandir 5s ease-out;	
+section .welcom{
+	animation: agrandir 5s ease-in;	
 }
 @keyframes agrandir{
 	0%{
 		text-align: center;
-		letter-spacing: 2px;
 	}
 	100%{
 		margin-top: 5%;
 		transform: scale(1.2);
 	}
+}
+section .opt{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10%;
 }
 section form{
 	box-shadow: 6px 9px 12px;

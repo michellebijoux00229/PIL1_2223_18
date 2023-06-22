@@ -47,7 +47,7 @@ header div nav ul li{
 /* Style de formulaire */
 #form{
 	width: 35%;
-	padding: 2%;
+	padding: 5% 2% 0 2%;
 	box-shadow: 6px 9px 12px;
 	border-top-left-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -66,16 +66,7 @@ header div nav ul li{
 	font-size: 11px;
 	background-color: #D9D9D9;
 }
-#form h6{
-	text-align: center;
-	text-decoration: underline;
-	margin: 5px 0;
-}
-#form p{
-	font-size: 12px;
-	color: blue;
-	margin: 5px;
-}
+
 /* Style de l'objectif de la page */
 .purpose .container h1{
 	text-align: center;
@@ -116,7 +107,7 @@ header div nav ul li{
 #event div{
 	text-align: center;
 	padding-bottom: 2%;
-	animation: slideToleft 10s;
+	animation: slideToleft 8s;
 }
 @keyframes slideToleft{
 	0%{
@@ -124,11 +115,11 @@ header div nav ul li{
 	}
 	50%{
 		transform: scale(1.1);
-		transition: transform 5s;
+		transition: transform 2s;
 	}
 	100%{
 		transform: scaleX(2);
-		transition: transform 5s;
+		transition: transform 3s;
 	}
 }
 

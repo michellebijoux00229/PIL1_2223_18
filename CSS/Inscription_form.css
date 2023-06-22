@@ -1,18 +1,43 @@
+/* Style Header */
+header{
+	background-color: #D9D9D9;
+}
+header div{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+header div img{
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+header div img:hover{
+	transform: scale(1.1);
+	transition: all 2s;
+}
+header div nav p{
+	background-color: white;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 20px;
+}
+
+/* Formulaire d'inscripption */
 body section{
 	background: url("/img/bg_form_inscrip.png") no-repeat center;
 	background-size: cover;
 	padding: 3%;
 	height: 100vh;
 }
-body section div h5{
-	margin: 3% 0;
-}
+
 body section div form{
-	width: 50%;
+	width: 70%;
 	padding: 2%;
 	box-shadow: 6px 9px 12px;
 	border-radius: 5px;
-	display: none;
-	margin: 5% 0% 3% 15%;
 	background-color: #D9D9D9;
+}
+body section div form div{
+	margin-top: 10px
 }

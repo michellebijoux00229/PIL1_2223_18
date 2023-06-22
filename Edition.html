@@ -14,37 +14,57 @@
 				<img src="Img/Logo_ifri_emploi.png" alt="logo_ifri" id="logo">
 				<nav>
 					<ul>
-						<button class="btn btn-danger" id="edition">Editer emplois</button>
-						<button class="btn btn-danger" id="event"><span class="glyphicon glyphicon-login"></span>Evènements</button>
+						<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+						<li><a href="admin_consult.html"><span class="glyphicon glyphicon-consult"></span> Consulter emlois</a></li>
+						<a class="btn btn-danger" href="Super-utilisateur.html"><span class="glyphicon glyphicon-login"></span> Ajouter un membre</a>
 					</ul>
-					<button class="btn btn-success" id="consult"><span class="glyphicon glyphicon-search"></span>Consultation</button>
 				</nav>
 			</div>
 		</header>
 		<section style="padding-top: 15px" class="container">
-			<h4>Bienvenue dans l'espace admin !</h4>
+			<div class="welcom">
+				<h4 style="text-align: center; letter-spacing: 2px;">Bienvenue dans l'espace admin !</h4>
+				<p style="text-align: center; margin-top: 5%; font-size: 20px; color: blue">Quelle tâche voulez-vous exécuter ?</p>
+				
+			</div>
+			<div class="opt">
+					<button class="btn btn-warning" id="edition">Editer emplois du temps</button>
+					<button class="btn btn-warning" id="event">Mentionner un évènement</button>
+				</div>
 			
 			<form action="traitement.py" id="emploi">
 				<div class="row">
 					<fieldset>
-					<legend>Promotion</legend>
-					<select id="promo" name="Promotion" class="form-control">
-						<option value="L1G1">Licence 1 Groupe 1</option>
-						<option value="L1G2">Licence 1 Groupe 2</option>
-						<option value="L2GL">Licence 2 GL</option>
-						<option value="L2SI">Licence 2 SI</option>
-						<option value="L2IM">Licence 2 IM</option>
-					</select>
-				</fieldset>
+						<legend>Semaine</legend>
+						<div class="form-group">
+							<label>DU</label>
+							<input type="date" id="semaine" name="Semaine" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>AU</label>
+							<input type="date" id="semaine" name="Semaine" class="form-control">
+						</div>
+						
+					</fieldset>
+					<fieldset>
+						<legend>Promotion</legend>
+						<select id="promo" name="Promotion" class="form-control">
+							<option value="Licence1_Groupe1">Licence 1 Groupe 1</option>
+							<option value="Licence1_Groupe2">Licence 1 Groupe 2</option>
+							<option value="Licence2_GL">Licence 2 GL</option>
+							<option value="Licence2_SI">Licence 2 SI</option>
+							<option value="Licence2_IM">Licence 2 IM</option>
+						</select>
+					</fieldset>
 				<fieldset class="col-md-5">
 					<legend>Matières et masse horaire</legend>
 					<div class="form-group">
 						<label for="matiere">Matière</label>
 						<select id="matiere" name="matiere" type="text" class="form-control" required>
-							<option value="">Mat1</option>
-							<option value="">Mat2</option>
-							<option value="">Mat3</option>
-							<option value="">Mat4</option>
+							<option value="ED">Equations différentielles</option>
+							<option value="SN">Suites et séries numérique</option>
+							<option value="AN">Anglais</option>
+							<option value="Ali">Algèbre linéaire</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -74,19 +94,10 @@
 				<fieldset class="col-md-5">
 					<legend>Chargé du cours</legend>
 					<div class="form-group">
-						<label for="nom">Nom professeur</label>
+						<label for="nom">Nom et prénom</label>
 						<select id="nom" name="nom" type="text" class="form-control" required>
 							<option value="">Zohoun Pierre</option>
 							<option value="">LAOUROU Pierre</option>
-							<option value="">Jean Joel</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="">Prenom professeur</label>
-						<select id="prenom" name="prenom" type="text" class="form-control" required>
-							<option value="">Zohoun Pierre</option>
-							<option value="">Jean Philipe</option>
-							<option value="">Jean Thierry</option>
 							<option value="">Jean Joel</option>
 						</select>
 					</div>
@@ -94,14 +105,7 @@
 				<fieldset class="col-md-5">
 					<legend>Salle de cours</legend>
 					<div class="form-group">
-						<label for="nom">Bâtiment</label>
-						<select id="nom" name="nom" type="text" class="form-control" required>
-							<option value="">Fakambi</option>
-							<option value="">Mooc</option>
-							<option value="">Iran</option>
-							<option value="">Patdice</option>
-						</select>
-						<label for="nom">Salle</label>
+						<label for="nom">Batiment et salle</label>
 						<select id="nom" name="nom" type="text" class="form-control" required>
 							<option value="">Amphi Iran 1</option>
 							<option value="">Amphi Iran 2</option>
@@ -155,8 +159,13 @@
 						<label for="heure_event">Time-end</label>
 						<input id="heure_event" name="time_event" type="time" class="form-control">
 					</div>
+					<div class="form-group">
+						<label for="affiche">Publier Affiche</label>
+						<input id="affiche" name="afficghe" type="image" class="form-control">
+					</div>
 				</fieldset>
-				<button type="submit" class="btn btn-danger">Publier évènement</button>
+				<button type="submit" class="btn btn-warning">Publier évènement</button>
 			</form>
+			
 		</section>
 	</body>

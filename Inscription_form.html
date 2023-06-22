@@ -8,12 +8,17 @@
 		<link rel="stylesheet" href="CSS/Inscription_form.css">	
 	</head>
 	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="Img/Logo_ifri_emploi.png" alt="logo_ifri" id="logo">
+				<nav>
+					<p><span class="glyphicon glyphicon-home"></span>Création de compte</p>
+				</nav>
+			</div>
+		</header>
 		<section>
-			<h2 style="text-align: center">Veuillez vous inscrire ici<span glyphicon glyphicon-main></span></h2>
+			<h2 style="text-align: center">Veuillez vous inscrire ici !<span glyphicon glyphicon-main></span></h2>
 			<div class="container">
-				<h5>S'inscrire en tant que: <button class="btn btn-danger" id="etu">Etudiant</button>
-				<button class="btn btn-danger" id="ad">Membre d'administration-IRFI</button>
-				</h5>
 				
 				<!-- Formulaire étudiants -->
 				<form id="inscrip1" action="traitement.py">
@@ -46,57 +51,16 @@
 						<label for="password">Mot de passe</label>
 						<input id="password" type="password" name="password" class="form-control" placeholder="Entrez votre mot de passe de connection" required>
 					</div>
+					<div class="form-group">
+						<label for="receive">Recevoir emploi par mail ?</label>
+						<input name="receive" type="radio" value="Oui">
+						<label for="not_receive">Ne pas recevoir emploi par mail ?</label>
+						<input name="not_receive" type="radio" value="Non">
+					</div>
 					<button type="submit" class="btn btn-warning" style="margin-top: 10px">Soumettre</button>
 				</form>
 				
-				<!-- Formulaire membres admins -->
-				<form id="inscrip2">
-					<div class="form-group">
-						<label for="nom">Nom</label>
-						<input id="nom" name="nom" type="text" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label for="prenom">Prénom(s)</label>
-						<input id="" name="prenom" type="text" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label for="emai">Email</label>
-						<input id="emai" name="email" type="email" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label for="poste">Poste</label>
-						<select id="poste" name="postes" class="form-control">
-							<option>D.G</option>
-							<option>D.A</option>
-							<option>Chef SCO</option>
-							<option>Enseignant</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="id">Identifiant</label>
-						<input id="id" type="password" name="id" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label for="password">Mot de passe</label>
-						<input id="password" type="password" name="password" class="form-control" placeholder="Entrez votre mot de passe de connection" required>
-					</div>
-					<button type="submit" class="btn btn-warning" style="margin-top: 10px">Soumettre</button>
-				</form>
 			</div>
 		</section>
-		<script>
-			const etudiant = document.getElementById("etu");
-			const admin = document.getElementById("ad");
-
-			etudiant.addEventListener("click", function(){
-				document.getElementById("inscrip1").style = "display:block";
-				document.getElementById("inscrip2").style = "display:none";
-				});
-			admin.addEventListener("click", function(){
-				document.getElementById("inscrip2").style = "display:block";
-				document.getElementById("inscrip1").style = "display:none";
-				});
-		
-		</script>
 	
 	</body>

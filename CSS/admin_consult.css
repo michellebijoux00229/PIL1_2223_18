@@ -20,7 +20,7 @@ header div img:hover{
 table{
 	border: 2px solid black;
 	text-align: center;
-	
+	margin: 10px auto;
 }
 th{
 	background-color: grey;

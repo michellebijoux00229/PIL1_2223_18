@@ -25,4 +25,4 @@ setInterval(function(){
 			event[i].style="display:block";
 		},5000);
 	}
-},20000)
+},10000)
