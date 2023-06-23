@@ -42,6 +42,17 @@ body {
         font-size: 15px;
         
       }
+
+      .ancre{
+        display: inline;
+        margin-left: 40px;
+        margin-right: 70px;
+        text-align:justify;
+        color: blue;
+       }
+      .ancre:after {
+        color: blue;
+      }
       
     .blue-bold {
         color: blue;
