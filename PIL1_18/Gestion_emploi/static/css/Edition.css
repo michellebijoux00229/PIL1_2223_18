@@ -1,0 +1,58 @@
+
+header{
+	background-color: #D9D9D9;
+}
+header div{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+header div img{
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+header div img:hover{
+	transform: scale(1.1);
+	transition: all 2s;
+}
+header div nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	width: 60%;
+}
+header div nav ul button{
+	margin: 5px;
+}
+
+
+/* Style de la page admin */
+section h4{
+	text-align: center;
+	letter-spacing: 2px;
+	animation: agrandir 5s ease-out;	
+}
+@keyframes agrandir{
+	0%{
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	100%{
+		margin-top: 5%;
+		transform: scale(1.2);
+	}
+}
+section form{
+	box-shadow: 6px 9px 12px;
+	background-color: beige;
+	margin-top: 10px;
+	padding: 5%;
+	display: none;
+}
+section form fieldset{
+	border-radius: 5px;
+	background-color: white;
+	padding: 2%;
+	margin: 2%;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps-Edition</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/Edition.css' %}">
+		<script src="{% static 'js/Edition.js' %}" async></script>
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="{% static 'Images/Logo_ifri_emploi.png' %}" alt="logo_ifri" id="logo">
+				<nav>
+					<ul>
+						<button class="btn btn-danger" id="edition">Editer emplois</button>
+						<button class="btn btn-danger" id="event"><span class="glyphicon glyphicon-login"></span>Evènements</button>
+					</ul>
+					<button class="btn btn-success" id="consult"><span class="glyphicon glyphicon-search"></span>Consultation</button>
+				</nav>
+			</div>
+		</header>
+		<section style="padding-top: 15px" class="container">
+			<h4>Bienvenue dans l'espace admin !</h4>
+			
+			
+				<form id="emploi" method="post" action="{% url 'Rempli_emploi' %}">
+					
+					{% csrf_token %}
+    				<div class="row">
+						<center><tr id="promo" name="Promotion" class="form-control"><fieldset>
+						
+						<th><legend for="Num_Emplois">  Promotion : </legend></th>
+						<td>{{ form.Promotion_Emplois }}</td>
+					</fieldset></tr></center>
+					
+
+					<fieldset class="col-md-5">
+						<legend>Matières et masse horaire</legend>
+						<div class="form-group">
+							<tr id="matiere" name="matiere" type="text" class="form-control" required>     
+							<th><label for="Num_Emplois">Matière: </label></th> <br>
+								<td>{{ form.Libellé_Mat }}</td>
+							 </tr>
+						</div>
+						<div class="form-group">
+							<tr id="horaire" name="horaire" type="time" class="form-control" required>
+							<th><label for="Num_Emplois"> Masse horaire: </label></th><br>
+							<td>{{ form.Horaire_Mat }}  </td> 
+							</tr>
+						</div>
+						<div class="form-group">
+							<tr id="horaire" name="horaire" type="time" class="form-control" required>
+							<th><label for="Num_Emplois">Temps restant:</label></th> <br>
+							<td>{{ form.Temps_restant_Mat }}  </td>
+						 	</tr>
+						</div>
+					</fieldset>
+
+
+					<fieldset class="col-md-5">
+						<legend>Date et heures de cours</legend>
+						<div class="form-group">
+							<tr id="date" name="date" type="date" class="form-control" required>
+							<th> <label for="Num_Emplois">Date:</label></th> <br>
+							<td>{{ form.Date_cours }}  </td>
+							</tr>
+						</div>
+						<div class="form-group">
+							<tr id="heure" name="horaire" type="time" class="form-control" required>
+							<th><label for="Num_Emplois">Heure de début: </label> </th> <br>
+							<td>{{ form.Début_cours }}  </td>
+							</tr>
+						</div>
+						<div class="form-group">
+							<tr id="heure" name="horaire" type="time" class="form-control" required>
+							<th><label for="Num_Emplois">Heure de fin:</label></th> <br>
+							<td>{{ form.Fin_cours }}  </td>
+							</tr>
+						</div>
+					</fieldset>
+
+
+
+					<fieldset class="col-md-5">
+						<legend>Chargé du cours</legend>
+						<div class="form-group">
+							<tr id="nom" name="nom" type="text" class="form-control" required>
+							<th><label for="Num_Emplois">Nom professeur: </label> </th> <br>
+							<td>{{ form.Nom_professeur }}  </td>
+							</tr>
+						</div>
+						<div class="form-group">
+							<tr id="prenom" name="prenom" type="text" class="form-control" required>
+							<th><label for="Num_Emplois">Prenom professeur: </label> </th> <br>
+							<td>{{ form.Prénom_Professeur }}  </td>
+							 </tr>
+						</div>
+					</fieldset>
+
+					<fieldset class="col-md-5">
+						<legend>Salle de cours</legend>
+						<div class="form-group">
+							<tr id="nom" name="nom" type="text" class="form-control" required>
+							<th><label for="Num_Emplois"> Bâtiment: </label></th> <br>
+							<td>{{ form.Bat_cours }}  </td>
+							 </tr></div>
+							 <div class="form-group">
+							 <tr id="nom" name="nom" type="text" class="form-control" required>
+							<th><label for="Num_Emplois">Salle:</label></th> <br> 
+							<td>{{ form.Salle_cours}}  </td>
+							 </tr>
+						</div>
+					</fieldset>
+
+
+					<fieldset class="col-md-5">
+						<legend>Examen</legend>
+						<div class="form-group">
+							<tr id="date_exam" name="Date_exam" class="form-control" type="date">
+							<th><label for="Num_Emplois">Date:</label> </th> <br>
+							<td>{{ form.Date_exam}} </td>
+						</tr>
+						</div>
+						<div class="form-group">
+							<tr id="heure_event" name="time_event" type="time" class="form-control">
+							<th><label for="Num_Emplois">Début:</label></th> <br>
+							<td>{{ form.Début_exam}}</td>
+						</tr>
+						</div>
+						<div class="form-group">
+							<tr id="heure_event" name="time_event" type="time" class="form-control">
+							<th><label for="Num_Emplois">End:</label> </th> <br>
+							<td>{{ form.Fin_exam}} </td
+							</tr>
+						</div>
+					</fieldset>
+					<button type="submit" class="btn btn-success">Soumettre</button>
+					</div>
+                    
+                    
+                </form>
+          
+                
+			
+			<form id="evenement">
+				<fieldset>
+					<legend>Evènement</legend>
+					<div class="form-group">
+						<label for="nom">Type</label>
+						<select id="nom" name="nom" type="text" class="form-control" required>
+							<option value="">Evènement IFRI</option>
+							<option value="">Jour férié</option>
+							<option value="">Congés</option>
+							<option value="">Réunion</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="date_event">Debut</label>
+						<input id="date_event" name="date_event" type="date" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="heure_event">Time-start</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="date_event">Fin</label>
+						<input id="date_event" name="date_event" type="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="heure_event">Time-end</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+				</fieldset>
+				<button type="submit" class="btn btn-danger">Publier évènement</button>
+			</form>
+		</section>
+	</body>

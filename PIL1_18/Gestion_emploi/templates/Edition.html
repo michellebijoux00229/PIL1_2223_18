@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps-Edition</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/Edition.css' %}">
+		<script src="{% static 'js/Edition.js' %}" async></script>
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="{% static 'Images/Logo_ifri_emploi.png' %}" alt="logo_ifri" id="logo">
+				<nav>
+					<ul>
+						<button class="btn btn-danger" id="edition">Editer emplois</button>
+						<button class="btn btn-danger" id="event"><span class="glyphicon glyphicon-login"></span>Evènements</button>
+					</ul>
+					<button class="btn btn-success" id="consult"><span class="glyphicon glyphicon-search"></span>Consultation</button>
+				</nav>
+			</div>
+		</header>
+		<section style="padding-top: 15px" class="container">
+			<h4>Bienvenue dans l'espace admin !</h4>
+			
+			<form action="traitement.py" id="emploi">
+				<div class="row">
+					<fieldset>
+					<legend>Promotion</legend>
+					<select id="promo" name="Promotion" class="form-control">
+						<option value="L1G1">Licence 1 Groupe 1</option>
+						<option value="L1G2">Licence 1 Groupe 2</option>
+						<option value="L2GL">Licence 2 GL</option>
+						<option value="L2SI">Licence 2 SI</option>
+						<option value="L2IM">Licence 2 IM</option>
+					</select>
+				</fieldset>
+				<fieldset class="col-md-5">
+					<legend>Matières et masse horaire</legend>
+					<div class="form-group">
+						<label for="matiere">Matière</label>
+						<select id="matiere" name="matiere" type="text" class="form-control" required>
+							<option value="">Mat1</option>
+							<option value="">Mat2</option>
+							<option value="">Mat3</option>
+							<option value="">Mat4</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="horaire">Masse horaire</label>
+						<input id="horaire" name="horaire" type="time" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="horaire">Temps restant</label>
+						<input id="horaire" name="horaire" type="time" class="form-control" required>
+					</div>
+				</fieldset>
+				<fieldset class="col-md-5">
+					<legend>Date et heures de cours</legend>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input id="date" name="date" type="date" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="heure">Heure de début</label>
+						<input id="heure" name="horaire" type="time" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="heure">Heure de fin</label>
+						<input id="heure" name="horaire" type="time" class="form-control" required>
+					</div>
+				</fieldset>
+				<fieldset class="col-md-5">
+					<legend>Chargé du cours</legend>
+					<div class="form-group">
+						<label for="nom">Nom professeur</label>
+						<select id="nom" name="nom" type="text" class="form-control" required>
+							<option value="">Zohoun Pierre</option>
+							<option value="">LAOUROU Pierre</option>
+							<option value="">Jean Joel</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="">Prenom professeur</label>
+						<select id="prenom" name="prenom" type="text" class="form-control" required>
+							<option value="">Zohoun Pierre</option>
+							<option value="">Jean Philipe</option>
+							<option value="">Jean Thierry</option>
+							<option value="">Jean Joel</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset class="col-md-5">
+					<legend>Salle de cours</legend>
+					<div class="form-group">
+						<label for="nom">Bâtiment</label>
+						<select id="nom" name="nom" type="text" class="form-control" required>
+							<option value="">Fakambi</option>
+							<option value="">Mooc</option>
+							<option value="">Iran</option>
+							<option value="">Patdice</option>
+						</select>
+						<label for="nom">Salle</label>
+						<select id="nom" name="nom" type="text" class="form-control" required>
+							<option value="">Amphi Iran 1</option>
+							<option value="">Amphi Iran 2</option>
+							<option value="">Fakambi 1</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset class="col-md-5">
+					<legend>Examen</legend>
+					<div class="form-group">
+						<label for="date_exam-">Date</label>
+						<input id="date_exam" name="Date_exam" class="form-control" type="date">
+					</div>
+					<div class="form-group">
+						<label for="heure_event">Début</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="heure_event">End</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+				</fieldset>
+				<button type="submit" class="btn btn-success">Soumettre</button>
+				</div>
+			</form>
+			<form id="evenement" action="traitement.py">
+				<fieldset>
+					<legend>Evènement</legend>
+					<div class="form-group">
+						<label for="nom">Type</label>
+						<select id="nom" name="nom" type="text" class="form-control" required>
+							<option value="">Evènement IFRI</option>
+							<option value="">Jour férié</option>
+							<option value="">Congés</option>
+							<option value="">Réunion</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="date_event">Debut</label>
+						<input id="date_event" name="date_event" type="date" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="heure_event">Time-start</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="date_event">Fin</label>
+						<input id="date_event" name="date_event" type="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="heure_event">Time-end</label>
+						<input id="heure_event" name="time_event" type="time" class="form-control">
+					</div>
+				</fieldset>
+				<button type="submit" class="btn btn-danger">Publier évènement</button>
+			</form>
+		</section>
+	</body>
