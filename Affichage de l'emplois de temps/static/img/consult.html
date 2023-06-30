@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps-Consultation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, in itial-scale=1">
+		<link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'CSS/consult.css' %}">		
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="Img/Logo_ifri_emploi.png" alt="logo_ifri" id="logo">
+				<a class="btn btn-danger" href="Doc/EmploiS1_15mai2023.pdf">Télécharger Emploi du temps</a>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<div class="head">
+					<img src="img/logo-uac.png" alt="uac_logo">
+					<div>
+						<h5>UNIVERSITE D'ABOMEY-CALAVI</h5>
+						<h4>INSTITUT DE FORMATION ET DE RECHERCHE EN INFORMATIQUE</h4>
+						<p>Site web: <a href="https://www.ifri-uac.bj">https://www.ifri-uac.bj</a> Email: <a href="#">contact@ifri.uac.bj</a> BP 526 Cotonou</p>
+					</div>
+					<img src="img/logoifri.png" alt="ifri_logo">
+				</div>
+				<h6>EMPLOI DU TEMPS DE LA LICENCE 1 - SEMAINE <span>---</span></h6>
+				<p>SPECIALITES: GENIE LOGICIEL - SECURITE INFORMATIQUE - INTERNET ET MULTIMEDIA - SYSTEMES EMBARQUES ET Io - INTELLIGENCE ARTIFICIELLE</p>
+				<div id="array" class="container-fluid">
+					<table style="border:2px solid black; padding: 2px;">
+						{% block content %}
+						{% for programme in programme %}
+					<tr class="k">
+						<tr>
+							<th style="border-right: 2px solid; padding-right: 2px;">{{ programme.Jour_Emplois }}</th>
+						</tr>	
+						<tr>
+							<td>Groupe <span>{{ programme.Num_groupe }}</span>: <span>{{ programme.Salle }}</span><br><span>{{ programme.début }}</span> <span>à</span> <span>{{ programme.fin }}</span> <span>{{ programme.Matière }}</span><br><span>{{ programme.Temps }}</span><br><span>{{ programme.Nom_professeur_Emplois }}</span>
+							</td>
+						
+						</tr>
+					</tr>
+							
+						</tr>
+						{% endfor %}
+						{% endblock %}
+						
+							
+					</table>
+				</div>
+				<p class="author">Abomey-calavi le:---<br>Nom de l'éditeur</p>
+			</div>
+		</section>
+	</body>

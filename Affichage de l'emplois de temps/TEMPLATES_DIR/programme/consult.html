@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+	<head>
+		<title>IFRI-UAC: Emploi du temps-Consultation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, in itial-scale=1">
+		<link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'CSS/consult.css' %}">		
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<img src="{% static 'Img/Logo_ifri_emploi.png' %}" alt="logo_ifri" id="logo">
+				<a class="btn btn-danger" href="Doc/EmploiS1_15mai2023.pdf">Télécharger Emploi du temps</a>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<div class="head">
+					<img src="{% static 'img/logo-uac.png' %}" alt="uac_logo">
+					<div>
+						<h5>UNIVERSITE D'ABOMEY-CALAVI</h5>
+						<h4>INSTITUT DE FORMATION ET DE RECHERCHE EN INFORMATIQUE</h4>
+						<p>Site web: <a href="https://www.ifri-uac.bj">https://www.ifri-uac.bj</a> Email: <a href="#">contact@ifri.uac.bj</a> BP 526 Cotonou</p>
+					</div>
+					<img src="{% static 'img/logoifri.png' %}" alt="ifri_logo">
+				</div>
+				<h6>EMPLOI DU TEMPS DE LA LICENCE 1 - <span> Promotion</span></h6>
+				<p>SPECIALITES: GENIE LOGICIEL - SECURITE INFORMATIQUE - INTERNET ET MULTIMEDIA - SYSTEMES EMBARQUES ET Io - INTELLIGENCE ARTIFICIELLE</p>
+				
+				<div id="array" class="container-fluid">
+					<table style="border:2px solid black; padding: 2px;">
+					<thead>
+					<tr>
+						<th>Jour</th>
+						<th>Salle</th>
+						<th>Heure début</th>
+						<th>Heure fin</th>
+						<th>Matière</th>
+						<th>Temps restant</th>
+						<th>Professeur</th>
+					</tr>
+					</thead>
+					<tbody>
+					{% for jour in jours_uniques %}
+					 {% for programme in programme %}
+					  {% if programme.jour == jour %}
+					<tr>
+						<td>{{ jour }}</td>
+						<td>{{ programme.matière }}
+							{{ programme.salle }}</td>
+						<td>{{ programme.heure_debut }}</td>
+						<td>{{ programme.heure_fin }}</td>
+						<td>{{ programme.matière }}</td>
+						<td>{{ programme.temps_restant }}</td>
+						<td>{{ programme.professeur }}</td>
+					</tr>
+					  {% endif %}
+					 {% endfor %}
+					{% endfor %}
+					
+					</tbody>
+					</table>
+				</div>
+						
+				
+						
+				<p class="author">Abomey-calavi le:---<br>Nom de l'éditeur</p>
+			</div>
+		</section>
+	</body>
+/	
